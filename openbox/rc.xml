@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_config
+    xmlns="http://openbox.org/3.4/rc"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+>
+
+<resistance>
+    <strength>             10 </strength>
+    <screen_edge_strength> 20 </screen_edge_strength>
+</resistance>
+
+<focus>
+    <focusDelay>   200 </focusDelay>
+    <focusNew>     yes </focusNew>
+    <focusLast>    yes </focusLast>
+    <followMouse>  no  </followMouse>
+    <underMouse>   no  </underMouse>
+    <raiseOnFocus> no  </raiseOnFocus>
+</focus>
+
+<placement>
+    <policy>         Smart  </policy>
+    <center>		 yes    </center>
+    <monitor>		 Active </monitor>
+    <primaryMonitor> Active </primaryMonitor>
+</placement>
+
+<theme>
+    <name> Hybrid </name>
+    <titleLayout>    LIMC </titleLayout>
+    <keepBorder>     yes  </keepBorder>
+    <animateIconify> no   </animateIconify>
+
+    <font place="ActiveWindow">
+        <name>   sans   </name>
+        <size>   9     </size>
+        <weight> normal </weight>
+        <slant>  normal </slant>
+    </font>
+    <font place="InactiveWindow">
+        <name>   sans   </name>
+        <size>   9      </size>
+        <weight> normal </weight>
+        <slant>  normal </slant>
+    </font>
+    <font place="MenuHeader">
+        <name>   sans   </name>
+        <size>   9      </size>
+        <weight> normal </weight>
+        <slant>  normal </slant>
+    </font>
+    <font place="MenuItem">
+        <name>   sans   </name>
+        <size>   9      </size>
+        <weight> normal </weight>
+        <slant>  normal </slant>
+    </font>
+    <font place="ActiveOnScreenDisplay">
+        <name>   sans   </name>
+        <size>   9      </size>
+        <weight> normal </weight>
+        <slant>  normal </slant>
+    </font>
+    <font place="InactiveOnScreenDisplay">
+        <name>   sans   </name>
+        <size>   9      </size>
+        <weight> normal </weight>
+        <slant>  normal </slant>
+    </font>
+</theme>
+
+<desktops>
+    <number>    4 </number>
+    <firstdesk> 1 </firstdesk>
+        <names>
+            <name> 1 </name>
+            <name> 2 </name>
+            <name> 3 </name>
+            <name> 4 </name>
+        </names>
+    <popupTime> 0 </popupTime>
+</desktops>
+
+<resize>
+    <drawContents>  yes    </drawContents>
+    <popupShow>     Never  </popupShow>
+    <popupPosition> Center </popupPosition>
+    <popupFixedPosition>
+        <x>10</x>
+        <y>10</y>
+    </popupFixedPosition>
+</resize>
+
+<margins>
+    <top>    0 </top>
+    <bottom> 0 </bottom>
+    <left>   0 </left>
+    <right>  0 </right>
+</margins>
+<dock>
+    <position>   TopLeft  </position>
+    <floatingX>  0        </floatingX>
+    <floatingY>  0        </floatingY>
+    <noStrut>    no       </noStrut>
+    <stacking>   Above    </stacking>
+    <direction>  Vertical </direction>
+    <autoHide>   no       </autoHide>
+    <hideDelay>  300      </hideDelay>
+    <showDelay>  300      </showDelay>
+    <moveButton> Middle   </moveButton>
+</dock>
+
+<keyboard>
+    <chainQuitKey>C-g</chainQuitKey>
+    <keybind key="W-1"> <action name="GoToDesktop"> <to> 1 </to> </action> </keybind>
+    <keybind key="W-2"> <action name="GoToDesktop"> <to> 2 </to> </action> </keybind>
+    <keybind key="W-3"> <action name="GoToDesktop"> <to> 3 </to> </action> </keybind>
+    <keybind key="W-4"> <action name="GoToDesktop"> <to> 4 </to> </action> </keybind>
+
+    <keybind key="W-S-1"> <action name="SendToDesktop"> <to> 1 </to> </action> </keybind>
+    <keybind key="W-S-2"> <action name="SendToDesktop"> <to> 2 </to> </action> </keybind>
+    <keybind key="W-S-3"> <action name="SendToDesktop"> <to> 3 </to> </action> </keybind>
+    <keybind key="W-S-4"> <action name="SendToDesktop"> <to> 4 </to> </action> </keybind>
+
+    <keybind key="W-d">  <action name="ToggleShowDesktop"/> </keybind>
+    <keybind key="A-F4"> <action name="Close"/>             </keybind>
+
+    <keybind key="A-Tab">
+        <action name="NextWindow">
+            <dialog> none </dialog>
+            <bar>    yes  </bar>
+            <raise>  yes  </raise>
+            <finalactions>
+                <action name="Focus"/>
+                <action name="Raise"/>
+                <action name="Unshade"/>
+            </finalactions>
+        </action>
+    </keybind>
+
+    <keybind key="W-h">
+        <action name="DirectionalCycleWindows">
+            <direction> left </direction>
+            <dialog>    none </dialog>
+            <bar>       yes  </bar>
+            <raise>     yes  </raise>
+        </action>
+    </keybind>
+    <keybind key="W-j">
+        <action name="DirectionalCycleWindows">
+            <direction> down </direction>
+            <dialog>    none </dialog>
+            <bar>       yes  </bar>
+            <raise>     yes  </raise>
+        </action>
+    </keybind>
+    <keybind key="W-k">
+        <action name="DirectionalCycleWindows">
+            <direction> up   </direction>
+            <dialog>    none </dialog>
+            <bar>       yes  </bar>
+            <raise>     yes  </raise>
+      </action>
+    </keybind>
+    <keybind key="W-l">
+        <action name="DirectionalCycleWindows">
+             <direction> right </direction>
+             <dialog>    none  </dialog>
+             <bar>       yes   </bar>
+             <raise>     yes   </raise>
+        </action>
+    </keybind>
+
+    <keybind key="XF86AudioMute">
+        <action name="Execute"> <command> amixer set Master    mute </command> </action>
+        <action name="Execute"> <command> amixer set Headphone mute </command> </action>
+        <action name="Execute"> <command> amixer set Speaker   mute </command> </action>
+    </keybind>
+    <keybind key="XF86AudioLowerVolume">
+        <action name="Execute"> <command> amixer set Master    unmute </command> </action>
+        <action name="Execute"> <command> amixer set Headphone unmute </command> </action>
+        <action name="Execute"> <command> amixer set Speaker   unmute </command> </action>
+        <action name="Execute"> <command> amixer set Master 5%-       </command> </action>
+    </keybind>
+    <keybind key="XF86AudioRaiseVolume">
+        <action name="Execute"> <command> amixer set Master    unmute </command> </action>
+        <action name="Execute"> <command> amixer set Headphone unmute </command> </action>
+        <action name="Execute"> <command> amixer set Speaker   unmute </command> </action>
+        <action name="Execute"> <command> amixer set Master 5%+       </command> </action>
+    </keybind>
+    <keybind key="XF86MonBrightnessDown">
+        <action name="Execute">
+            <command> xbacklight -dec 10 </command>
+        </action>
+    </keybind>
+    <keybind key="XF86MonBrightnessUp">
+        <action name="Execute">
+            <command> xbacklight -inc 10 </command>
+        </action>
+    </keybind>
+
+    <keybind key="W-x">
+        <action name="Execute">
+            <command> xterm </command>
+        </action>
+    </keybind>
+    <keybind key="W-r">
+        <action name="If">
+            <query target="default">
+                <name> bashrun </name> 
+            </query>
+            <then> </then>
+            <else>
+                <action name="Execute">
+                    <command> bashrun </command>
+                </action>
+            </else>
+        </action>
+    </keybind>
+</keyboard>
+
+<mouse>
+    <dragThreshold>       1     </dragThreshold>
+    <doubleClickTime>     500   </doubleClickTime>
+    <screenEdgeWarpTime>  400   </screenEdgeWarpTime>
+    <screenEdgeWarpMouse> false </screenEdgeWarpMouse>
+
+    <context name="Titlebar">
+        <mousebind button="Left" action="Drag">        <action name="Move"/>           </mousebind>
+        <mousebind button="Left" action="DoubleClick"> <action name="ToggleMaximize"/> </mousebind>
+    </context>
+
+    <context name="Titlebar Top Right Bottom Left TLCorner TRCorner BRCorner BLCorner">
+        <mousebind button="Left Middle Right" action="Press">
+            <action name="Focus"/>
+            <action name="Raise"/>
+            <action name="Unshade"/>
+        </mousebind>
+    </context>
+
+    <context name="Top">
+        <mousebind button="Left" action="Drag">
+            <action name="Resize"> <edge> top </edge> </action>
+        </mousebind>
+    </context>
+    <context name="Left">
+        <mousebind button="Left" action="Drag">
+            <action name="Resize"> <edge> left </edge> </action>
+        </mousebind>
+    </context>
+    <context name="Right">
+        <mousebind button="Left" action="Drag">
+            <action name="Resize"> <edge> right </edge> </action>
+        </mousebind>
+    </context>
+    <context name="Bottom">
+        <mousebind button="Left" action="Drag">
+            <action name="Resize"> <edge> bottom </edge> </action>
+        </mousebind>
+    </context>
+
+    <context name="TRCorner BRCorner TLCorner BLCorner">
+        <mousebind button="Left" action="Drag"> <action name="Resize"/> </mousebind>
+    </context>
+
+    <context name="Client">
+        <mousebind button="Left Middle Right" action="Press">
+            <action name="Focus"/>
+            <action name="Raise"/>
+        </mousebind>
+    </context>
+
+    <context name="Iconify">
+        <mousebind button="Left Middle Right" action="Press">
+            <action name="Focus"/>
+            <action name="Raise"/>
+        </mousebind>
+        <mousebind button="Left Middle Right" action="Click">
+            <action name="Iconify"/>
+        </mousebind>
+    </context>
+
+    <context name="Maximize">
+        <mousebind button="Left Middle Right" action="Press">
+            <action name="Focus"/>
+            <action name="Raise"/>
+            <action name="Unshade"/>
+        </mousebind>
+        <mousebind button="Left" action="Click">
+            <action name="ToggleMaximize"/>
+        </mousebind>
+        <mousebind button="Middle" action="Click">
+            <action name="ToggleMaximize"> <direction> horizontal </direction> </action>
+        </mousebind>
+        <mousebind button="Right" action="Click">
+            <action name="ToggleMaximize"> <direction> vertical </direction> </action>
+        </mousebind>
+    </context>
+
+    <context name="Close">
+        <mousebind button="Left Middle Right" action="Press">
+            <action name="Focus"/>
+            <action name="Raise"/>
+            <action name="Unshade"/>
+        </mousebind>
+        <mousebind button="Left Middle Right" action="Click">
+            <action name="Close"/>
+        </mousebind>
+    </context>
+    <context name="Root">
+        <mousebind button="Right" action="Press">
+            <action name="ShowMenu"> <menu> root-menu </menu> </action>
+        </mousebind>
+    </context>
+</mouse>
+
+<menu>
+    <file>             menu.xml </file>
+    <hideDelay>        200      </hideDelay>
+    <middle>           no       </middle>
+    <submenuShowDelay> 100      </submenuShowDelay>
+    <submenuHideDelay> 400      </submenuHideDelay>
+    <showIcons>        yes      </showIcons>
+    <manageDesktops>   yes      </manageDesktops>
+</menu>
+
+<applications>
+    <application name="bashrun">
+        <decor> no </decor>
+        <layer> above </layer>
+        <position force="no">
+            <x>        10   </x>
+            <y>       -10   </y>
+            <monitor> mouse </monitor>
+        </position>
+    </application>
+</applications>
+
+</openbox_config>

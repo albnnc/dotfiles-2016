@@ -1,0 +1,19 @@
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set smarttab
+set autoindent
+" set cindent
+
+
+set background=dark
+let g:hybrid_custom_term_colors=1
+colorscheme hybrid
+syntax on
+
+set number
+
+" Don't make a mess
+let g:netrw_dirhistmax=0
+set nobackup
+set noswapfile

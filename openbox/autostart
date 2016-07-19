@@ -1,0 +1,5 @@
+tint2 -c ~/.tint2rc &
+compton &
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+feh --bg-scale "$DIR/wallpaper.jpg"

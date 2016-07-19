@@ -1,0 +1,56 @@
+XTERM=xterm
+KEEP_OPEN=no	
+
+SMALL_COLUMNS=40
+SMALL_LINES=1
+
+LARGE_COLUMNS=40
+LARGE_LINES=8
+
+BGCOLOR=black
+FGCOLOR=grey
+
+PS1="> "
+
+HISTCONTROL=ignoredups:erasedups 
+
+COMPLETION_TYPE=menu-complete
+COMPLETION_THRESHOLD=$LARGE_LINES
+ALTERNATIVE_COMPLETION_TYPE=complete
+
+USE_EXTENDED_BASH_COMPLETION=no
+EXTENDED_BASH_COMPLETION_PATH=/etc/profile.d/bash_completion.sh 
+
+
+TERMINAL_RULES=(
+    "RUN:"
+    "PAGE:"
+    "HOLD:"
+)
+
+#DIRHANDLER='kfmclient openProfile filemanagement'
+#POST_MAP_COMMAND='transset-df -a 0.65'
+#DICT_CLIENT=kdict
+
+BROWSER=chromium
+GOOGLE_FALLBACK=no
+
+HANDLERS=(
+    '^https?'   "$BROWSER"
+    '^www'      "$BROWSER"
+
+    '^gg:(.+)'  "$BROWSER 'http://www.google.com/search?q=\$1'"
+    '^ggl:(.+)' "$BROWSER 'http://www.google.com/search?q=\$1&btnI=I%27m+Feeling+Lucky'"
+    '^fm:(.+)'  "$BROWSER 'http://freshmeat.net/search/?q=\$1&section=projects'"
+    '^sf:(.+)'  "$BROWSER 'https://sourceforge.net/projects/\$1/'"
+    '^sfw:(.+)' "$BROWSER 'http://\$1.sourceforge.net/'"
+    '^ftp:(.+)' "xterm -e 'ncftp \$1'"
+
+    '\.jpe?g$'  "f!x:feh"
+    '^\?\?(.+)'  "xterm -e 'man \$1'"
+    '^\?(.+)'  "xterm -e '\$1 --help | $PAGER'"
+)  
+
+BOOKMARKS=()
+
+LOGFILE=/dev/null
