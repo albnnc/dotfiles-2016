@@ -25,4 +25,4 @@ installation tool.
 * *ext* folder consists of files which wouldn't be installed automatically,
 even with Blossom (it's possible, but I don't want to abuse some
 directories because of safety). Usually these are configs from various
-*/etc* folders.
+*/etc* directories.
