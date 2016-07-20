@@ -10,6 +10,8 @@ pacman -S xorg-server       \
           compton           \
           bashrun           \
                             \
+          numix-themes      \
+                            \
           alsa-utils        \
                             \
           feh               \
@@ -19,3 +21,6 @@ pacman -S xorg-server       \
           chromium          \
           thunar            \
           xarchiver
+
+# numix-icon-theme-git should
+# be installed manually from AUR
