@@ -16,5 +16,6 @@ pacman -S xorg-server       \
           mtpaint           \
                             \
           git               \
+          chromium          \
           thunar            \
           xarchiver
