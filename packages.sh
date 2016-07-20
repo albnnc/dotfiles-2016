@@ -13,7 +13,7 @@ pacman -S xorg-server       \
           alsa-utils        \
                             \
           feh               \
-          gimp              \
+          mtpaint           \
                             \
           git               \
           thunar            \
