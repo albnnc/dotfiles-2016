@@ -123,8 +123,8 @@
     <keybind key="W-S-3"> <action name="SendToDesktop"> <to> 3 </to> </action> </keybind>
     <keybind key="W-S-4"> <action name="SendToDesktop"> <to> 4 </to> </action> </keybind>
 
-    <keybind key="W-d">  <action name="ToggleShowDesktop"/> </keybind>
-    <keybind key="A-F4"> <action name="Close"/>             </keybind>
+    <keybind key="W-d"> <action name="ToggleShowDesktop"/> </keybind>
+    <keybind key="W-q"> <action name="Close"/>             </keybind>
 
     <keybind key="A-Tab">
         <action name="NextWindow">
